@@ -10,8 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,200,500,600,700'>
+    <link rel='stylesheet' type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel='stylesheet' type='text/css' href="index.css">
 
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -20,17 +21,41 @@
   </head>
 
   <body>
-    <img class='main-logo' src='./img/shasta-logo-white.png'/>
-    <div class='logos'>
+    <div class='container'>
+      <a class='sub-logo' href='http://shasta.tools/shasta'>
+        <img src='./img/shasta-logo-white.png'/>
+      </a>
+      <div class='side-text'>
+        <p class='side-text-header'>Renounce Complexity</p>
+        <p class='side-text-content'>Building complex applications using React, Redux, and Immutable.js has never been easier - we made sure of that.</p>
+      </div>
+    </div>
+    <div class='container'>
       <a class='sub-logo' href='http://shasta.tools/sutro'>
         <img src='./img/sutro-logo-white.png'/>
       </a>
+      <div class='side-text'>
+        <p class='side-text-header'>Next-level Data</p>
+        <p class='side-text-content'>Create simple, fast, highly scalable, and secure real-time APIs using RethinkDB and Node.js.</p>
+      </div>
+    </div>
+    <div class='container'>
       <a class='sub-logo' href='http://shasta.tools/palisade'>
         <img src='./img/palisade-logo-white.png'/>
       </a>
+      <div class='side-text'>
+        <p class='side-text-header'>Secure Access</p>
+        <p class='side-text-content'>Create fine-grained controls over how your data is accessed and modified throughout your application.</p>
+      </div>
+    </div>
+    <div class='container'>
       <a class='sub-logo' href='http://shasta.tools/tahoe'>
         <img src='./img/tahoe-logo-white.png'/>
       </a>
+      <div class='side-text'>
+        <p class='side-text-header'>Seamless Integration</p>
+        <p class='side-text-content'>Standard Redux actions integrate your APIs with the rest of your application and make sure data is kept in sync efficiently.</p>
+      </div>
     </div>
   </body>
 </html>

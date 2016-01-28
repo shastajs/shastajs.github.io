@@ -2,31 +2,65 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #111;
-  color: #eee;
+  color: #fff;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'liga', 'kern';
+  -moz-font-feature-settings: 'liga', 'kern';
+  font-feature-settings: 'liga', 'kern';
+
+  display: flex;
+  flex-direction: column;
+	align-items: center;
 }
 
 img {
   max-width: 100%;
 }
 
-.main-logo {
-  display: block;
-  margin: 0 auto;
-  width: 500px;
-}
-
-.logos {
+.container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  max-width: 700px;
+  width: 100%;
+  padding: 40px;
+}
+
+.container > * {
+  display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .sub-logo {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  padding: 0.5em;
   width: 250px;
+}
+
+.side-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  padding-bottom: 30px;
+}
+.side-text-header {
+  font-size: 24px;
+}
+.side-text-content {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 500px) {
+  .side-text {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
 }
