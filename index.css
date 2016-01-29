@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: #111;
+  background-color: #000;
   color: #fff;
 
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -14,8 +14,11 @@ html, body {
   font-feature-settings: 'liga', 'kern';
 
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
 	align-items: center;
+  justify-content: space-between;
 }
 
 img {
@@ -24,12 +27,31 @@ img {
 
 .container {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 700px;
-  width: 100%;
   padding: 30px;
+  margin: 20px;
+  border: 2px solid #fff;
+  min-height: 600px;
+  min-width: 600px;
+
+  opacity: 0;
+  animation: fade 2s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+.container:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.container:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.container:nth-child(4) {
+  animation-delay: 4s;
 }
 
 .container > * {
@@ -57,10 +79,21 @@ img {
 }
 
 @media only screen and (max-width: 500px) {
+  html, body {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .container {
+    min-width: 0;
+  }
   .side-text {
     max-width: 100%;
     align-items: center;
     text-align: center;
     padding: 20px;
   }
+}
+
+@keyframes fade {
+  100% { opacity: 1; }
 }
