@@ -12,36 +12,41 @@ html, body {
   -webkit-font-feature-settings: 'liga', 'kern';
   -moz-font-feature-settings: 'liga', 'kern';
   font-feature-settings: 'liga', 'kern';
-
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  flex-wrap: wrap;
-	align-items: center;
-  justify-content: space-between;
 }
 
 img {
   max-width: 100%;
 }
 
+.containers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	align-items: center;
+  justify-content: center;
+}
 .container {
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 30px;
-  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
   border: 2px solid #fff;
-  min-height: 600px;
-  min-width: 600px;
+  height: 590px;
+  overflow: hidden;
 
   opacity: 0;
   animation: fade 2s ease-in-out forwards;
 	animation-delay: 1s;
+  transition: all 750ms ease-in-out;
 }
 
+.container:hover {
+  background-color: #5a25f7;
+}
 .container:nth-child(2) {
   animation-delay: 2s;
 }
@@ -56,6 +61,7 @@ img {
 
 .container > * {
   display: flex;
+  flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
@@ -65,32 +71,49 @@ img {
 }
 
 .side-text {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  max-width: 300px;
   padding-bottom: 30px;
+  max-width: 400px;
 }
-.side-text-header {
-  font-size: 24px;
+.header {
+  flex-direction: row;
+
+  font-size: 32px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .side-text-content {
-  font-size: 18px;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
+.title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+}
+.coming-soon {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
 @media only screen and (max-width: 500px) {
-  html, body {
+  .containers {
     flex-direction: column;
-    flex-wrap: nowrap;
   }
   .container {
-    min-width: 0;
-  }
-  .side-text {
-    max-width: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    height: auto;
   }
 }
 
