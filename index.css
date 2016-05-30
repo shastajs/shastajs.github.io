@@ -41,7 +41,7 @@ img {
 }
 
 .container:hover {
-  background-color: rgba(#5a25f7, 0.5);
+  background-color: #5a25f7;
 }
 
 .sub-logo > img {
